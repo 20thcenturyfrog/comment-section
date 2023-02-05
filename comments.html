@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оставьте комментарий</title>
+    <link rel="stylesheet" href="comments.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div class="container">
+        <h1 class="headline">Оставьте комментарий!</h1>
+        <p class="label">
+          Анонимный комментарий
+          <input type="checkbox" id="checkbox" name="anonymous" />
+        </p>
+        <label for="name" class="label">Введите свои ФИО:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Иванов Иван Иванович"
+          required
+          class="input"
+        />
+        <label for="url" class="label">Введите ссылку на свой аватар:</label>
+        <input
+          type="url"
+          id="url"
+          name="url"
+          placeholder="https://example.com"
+          pattern="https://.*"
+          required
+          class="input"
+        />
+        <label for="comment" name="comment" class="label"
+          >Введите свой комментарий:</label
+        >
+        <textarea
+          id="comment"
+          placeholder="Мне всё понравилось! Приду к вам ещё!"
+          required
+          class="input"
+        ></textarea>
+        <div id="warning" class="warning">Вы не ввели текст комментария!</div>
+        <button id="addComment" class="button">Отправить</button>
+      </div>
+      <div id="allComments" class="all-comments-container"></div>
+    </div>
+    <script src="comments.js"></script>
+  </body>
+</html>
